@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(141, 67, 67);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+main {
+    flex: 1;
+}
+
+.page-title {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(79, 50, 50, 0.1);
+    text-decoration: underline;
+}
+  
+.footer-section {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.main-screen {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.login-field h3,
+.register-field h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+  
+.login-form,
+.register-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-form label,
+.register-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    display: block;
+    color: black;
+}
+  
+.login-form input,
+.register-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
+
+.login-form button,
+.register-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(141, 67, 67);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+  
+.login-form button:hover,
+.register-form button:hover {
+    background-color: rgb(36, 8, 8);
+}
+
+.form-toggle {
+    margin-top: 20px;
+    text-align: center;
+}
+  
+.form-toggle a {
+    color: rgb(36, 8, 8);
+    font-weight: bold;
+}
+  
+.form-toggle a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .msg {
+        display: none;
+    }
+}
