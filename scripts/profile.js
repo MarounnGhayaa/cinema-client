@@ -1,4 +1,4 @@
-const storedUser = localStorage.getItem('currentUser');
+const storedUser = JSON.parse(localStorage.getItem('currentUser'));
 if (storedUser) {
     document.getElementById('user-name').textContent = storedUser.name;
     document.getElementById('user-email').textContent = storedUser.email;
