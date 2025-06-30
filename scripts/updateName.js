@@ -11,9 +11,10 @@ updateNameButton.addEventListener('click', function(e) {
     })
     .then(response => {
         if (response.data.success) {
-            console.log("Name updated:", response.data.updatedUser);
             alert("Name updated successfully!");
             document.getElementById('user-name').innerText = newName;
+            currentUser.name = newName;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
         } else {
             alert("Update failed: " + response.data.message);
         }
