@@ -4,6 +4,11 @@ updateNameButton.addEventListener('click', function(e) {
     e.preventDefault();
     const newName = document.getElementById('newNameInput').value;
 
+    if(newName === "") {
+        alert("ENTER A NAME !");
+        return;
+    }
+
     axios.post("http://localhost/cinema-server/controllers/update_name.php", {
         column_name: "name",
         new_value: newName,
