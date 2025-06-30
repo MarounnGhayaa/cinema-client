@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/profile.css"/>
+    <script src="../scripts/axios.min.js"></script>
+    <title>Profile</title>
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+    </header>
+
+    <main>
+        <section class="profile-card">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <div class="info">
+                <p><strong>Email:</strong> <span id="user-email"></span></p>
+                <p><strong>Phone:</strong> <span id="user-phone"></span></p>
+                <p><strong>Favorite Genre:</strong> <span id="user-favorite-genre"></span></p>
+                <p><strong>Age:</strong> <span id="user-age"></span></p>
+            </div>
+
+            <div class="edit-section">
+                <div class="edit-field">
+                    <label for="newNameInput">New Name:</label>
+                    <input type="text" id="newNameInput" placeholder="Enter new name">
+                    <button id="editName">Update Name</button>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button><a href="userPage.html">Back to home</a></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart Cinema</p>
+    </footer>
+
+    <script src="../scripts/updateName.js"></script>
+    <script src="../scripts/profile.js"></script>
+</body>
+</html>
