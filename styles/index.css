@@ -49,7 +49,7 @@ main {
 }
 
 .msg {
-    color: white;
+    background-color: rgb(237, 211, 211);
 }
 
 .login-field h3,
