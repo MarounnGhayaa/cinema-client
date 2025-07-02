@@ -5,7 +5,9 @@
 }
 
 body {
-    background-color: rgb(141, 67, 67);
+    background-image: url(http://127.0.0.1:5500/assests/cinemaIMG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -44,6 +46,10 @@ main {
     gap: 40px;
     padding: 50px;
     flex-wrap: wrap;
+}
+
+.msg {
+    color: white;
 }
 
 .login-field h3,
@@ -98,11 +104,13 @@ main {
 .form-toggle {
     margin-top: 20px;
     text-align: center;
+    color : white;
 }
   
 .form-toggle a {
-    color: rgb(36, 8, 8);
+    color: white;
     font-weight: bold;
+
 }
   
 .form-toggle a:hover {
