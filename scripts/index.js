@@ -1,3 +1,6 @@
+const LOGIN_URL = 'http://localhost/cinema-server/login';
+const REGISTER_URL = 'http://localhost/cinema-server/register';
+
 const showRegisterLink = document.getElementById('showRegister');
 const showLoginLink = document.getElementById('showLogin');
 const loginField = document.getElementById('loginForm');
@@ -22,7 +25,7 @@ loginForm.addEventListener('submit', function(e) {
     const email = document.getElementById('log-email').value;
     const password = document.getElementById('log-pass').value;
 
-    axios.post('https://localhost/cinema-server/controllers/login.php', {
+    axios.post(LOGIN_URL, {
         email: email,
         password: password
     })
@@ -58,7 +61,7 @@ registerForm.addEventListener('submit', function(e) {
     const age = document.getElementById('regAge').value;
     const favorite_genre = document.getElementById('regFavGenre').value;
 
-    axios.post('https://localhost/cinema-server/controllers/register.php', {
+    axios.post(REGISTER_URL, {
         name: name,
         email: email,
         password: password,

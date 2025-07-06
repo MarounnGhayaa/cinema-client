@@ -1,10 +1,13 @@
+const USERS_URL = 'http://localhost/cinema-server/users';
+const DELETE_URL = 'http://localhost/cinema-server/delete_user';
+
 const tbody = document.querySelector('#users-table tbody');
 
 tbody.addEventListener('click', function(e) {
     if (e.target.classList.contains('delete-btn')) {
         const userId = e.target.getAttribute('data-id');
         
-        axios.post('http://localhost/cinema-server/controllers/delete_user.php', {
+        axios.post(DELETE_URL, {
             id: userId
         })
         .then(() => {
@@ -16,21 +19,21 @@ tbody.addEventListener('click', function(e) {
     }
 });
 
-axios.get('http://localhost/cinema-server/controllers/get_users.php')
+axios.get(USERS_URL)
     .then((response) => {
-        const users = response.data.users;
+        const users = response.data.payload;
         const tbody = document.querySelector('#users-table tbody');
 
         users.forEach(user => {
             const row = document.createElement('tr');
 
             row.innerHTML = 
-                    `<td>${user.id}</td>
-                    <td>${user.name}</td>
-                    <td>${user.age}</td>
-                    <td>${user.email}</td>
-                    <td>${user.favorite_genre}</td>
-                    <td><button class="delete-btn" data-id="${user.id}">Delete</button></td>`;
+                    `<td>${user[0]}</td>
+                    <td>${user[1]}</td>
+                    <td>${user[6]}</td>
+                    <td>${user[2]}</td>
+                    <td>${user[4]}</td>
+                    <td><button class="delete-btn" data-id="${user[0]}">Delete</button></td>`;
 
                 tbody.appendChild(row);
             });

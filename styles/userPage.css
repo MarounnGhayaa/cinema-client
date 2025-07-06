@@ -51,7 +51,8 @@ main {
     padding-bottom: 60px;
 }
 
-.welcome h2 {
+.welcome {
+    background-color: rgb(237, 211, 211);
     margin-bottom: 0.5rem;
 }
 
@@ -92,16 +93,15 @@ footer {
     }
 
     nav {
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 100;
-}
-
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 100;
+    }
 }
